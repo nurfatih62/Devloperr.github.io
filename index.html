@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devloper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h3>Devloper</h3>
+    </header>
+
+    <div class="flex-section">
+        <div class="text-content">
+            <h2>Deskripsi</h2>
+            <p>Kami menyediakan layanan pengembangan web profesional dengan teknologi terbaru dan desain yang menarik.</p>
+        </div>
+        <div class="image-content">
+            <img src="example.jpg" alt="Gambar Deskripsi">
+        </div>
+    </div>
+
+    <div class="circle-section">
+        <div class="description">
+            <p>Deskripsi kiri</p>
+        </div>
+        <div class="image-wrapper">
+            <img src="your-image.jpg" alt="Foto Melingkar" class="circle-image">
+        </div>
+        <div class="description">
+            <p>Deskripsi kanan</p>
+        </div>
+    </div>
+
+    <div class="gallery-section">
+        <h2>Galeri</h2>
+        <div class="gallery-wrapper" id="gallery">
+            <div class="gallery-item"><img src="image1.jpg" alt="Gambar 1"></div>
+            <div class="gallery-item"><img src="image2.jpg" alt="Gambar 2"></div>
+            <div class="gallery-item"><img src="image3.jpg" alt="Gambar 3"></div>
+            <div class="gallery-item"><img src="image4.jpg" alt="Gambar 4"></div>
+            <div class="gallery-item"><img src="image5.jpg" alt="Gambar 5"></div>
+            <div class="gallery-item"><img src="image6.jpg" alt="Gambar 6"></div>
+            <div class="gallery-item"><img src="image7.jpg" alt="Gambar 7"></div>
+            <div class="gallery-item"><img src="image8.jpg" alt="Gambar 8"></div>
+        </div>
+    </div>
+
+    <script>
+        const gallery = document.getElementById('gallery');
+
+        gallery.addEventListener('mousemove', (e) => {
+            const rect = gallery.getBoundingClientRect();
+            const x = e.clientX - rect.left; // Posisi mouse relatif terhadap galeri
+            const scrollWidth = gallery.scrollWidth - rect.width;
+
+            const scrollAmount = (x / rect.width) * scrollWidth;
+            gallery.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <div class="footer-section">
+        <h4>Tempat belajar budidaya kode (coding) dengan tutorial yang gampang dipahami.</h4>
+        <div class="footer-links">
+            <div class="column">
+                <h5>Belajar</h5>
+                <ul>
+                    <li>Artikel</li>
+                    <li>Tutorial</li>
+                    <li>Buku</li>
+                    <li>Popular Tutorial</li>
+                    <li>Tutorial Bahasa C</li>
+                    <li>Tutorial Javascript</li>
+                    <li>Tutorial Java</li>
+                    <li>Tutorial PHP</li>
+                    <li>Tutorial Python</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h5>Social Media</h5>
+                <ul>
+                    <li>Facebook Page</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>Youtube Channel</li>
+                    <li>Telegram Channel</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h5>Devloper</h5> <!-- Ganti di sini -->
+                <ul>
+                    <li>About</li>
+                    <li>FAQs</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+        <p>Ikuti Kami di</p>
+        <p>© 2024 Devloper · Made with ❤️ using Hugo 0.134.0</p> <!-- Ganti di sini -->
+    </div>
+    
+</body>
+</html>

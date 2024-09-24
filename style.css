@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-image: url('begraun.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+header h3 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 
+        3px 3px 6px rgba(0, 0, 0, 0.5),
+        -1px -1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.flex-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    height: 100vh;
+    background-color: #fff8e8;
+}
+
+.text-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f7eed3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Bagian baru dengan foto melingkar dan deskripsi */
+.circle-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    height: 100vh; /* Tinggi tetap sama */
+    background-color: #f7eed3;
+}
+
+.circle-section .description {
+    flex: 1;
+    padding: 20px;
+    color: #333;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.circle-section .image-wrapper {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-section .circle-image {
+    width: 400px; /* Memperbesar foto */
+    height: 400px; /* Memperbesar foto */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Galeri */
+.gallery-section {
+    background-color: #6c4e31; /* Ganti dengan warna yang diminta */
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-wrapper {
+    display: flex;
+    overflow-x: hidden; /* Menghapus scroll */
+    padding: 10px;
+    cursor: pointer; /* Menambahkan kursor pointer */
+}
+
+.gallery-item {
+    flex: none;
+    width: 200px; /* Ukuran setiap item galeri */
+    margin-right: 10px;
+}
+
+.gallery-item img {
+    width: 100%; /* Ukuran gambar 100% dari item */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+    .flex-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .text-content, .image-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .circle-section {
+        flex-direction: column;
+    }
+
+    .circle-section .description {
+        text-align: center;
+    }
+
+    .gallery-wrapper {
+        flex-direction: column; /* Menjadi kolom di perangkat mobile */
+    }
+
+    .gallery-item {
+        margin-right: 0; /* Menghapus margin kanan */
+        margin-bottom: 10px; /* Menambah margin bawah */
+    }
+}
+.footer-section {
+    background-color: #333; /* Warna latar belakang footer */
+    color: white; /* Warna teks */
+    padding: 20px; /* Padding untuk footer */
+    text-align: center; /* Rata tengah */
+}
+
+.footer-links {
+    display: flex; /* Mengatur tampilan kolom */
+    justify-content: center; /* Rata tengah */
+    flex-wrap: wrap; /* Membuat kolom responsif */
+    margin-bottom: 10px; /* Margin bawah */
+}
+
+.column {
+    margin: 0 20px; /* Margin antar kolom */
+}
+
+.column h5 {
+    margin-bottom: 10px; /* Margin bawah judul kolom */
+}
+
+.column ul {
+    list-style-type: none; /* Menghapus bullet point */
+    padding: 0; /* Menghapus padding */
+}
+
+.column li {
+    margin: 5px 0; /* Margin antar item */
+}
